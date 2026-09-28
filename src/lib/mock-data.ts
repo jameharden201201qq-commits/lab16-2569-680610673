@@ -1,4 +1,4 @@
-import type { Course, Student } from "@/lib/types";
+import type { Student, Course } from "@/lib/types";
 
 export const students: Student[] = [
   {
@@ -7,7 +7,7 @@ export const students: Student[] = [
     lastName: "Damon",
     program: "CPE",
     status: "Active",
-    enrolledCourses: ["CS101"],
+    enrolledCourses:[]
   },
   {
     studentId: "650610002",
@@ -15,7 +15,7 @@ export const students: Student[] = [
     lastName: "Murphy",
     program: "CPE",
     status: "Active",
-    enrolledCourses: ["CS101", "CS201"],
+    enrolledCourses:["261207" ,"261497"]
   },
   {
     studentId: "650610003",
@@ -23,63 +23,24 @@ export const students: Student[] = [
     lastName: "Blunt",
     program: "ISNE",
     status: "Active",
-    enrolledCourses: ["CS201"],
-  },
-  {
-    studentId: "650610004",
-    firstName: "Florence",
-    lastName: "Pugh",
-    program: "ISNE",
-    status: "Active",
-    enrolledCourses: [],
-  },
-  {
-    studentId: "650610005",
-    firstName: "Robert",
-    lastName: "Downey",
-    program: "CPE",
-    status: "Active",
-    enrolledCourses: [],
-  },
-  {
-    studentId: "650610006",
-    firstName: "Zendaya",
-    lastName: "Coleman",
-    program: "CPE",
-    status: "Active",
-    enrolledCourses: ["CS101"],
+    enrolledCourses:["269101","261497"]
   },
 ];
 
 export const courses: Course[] = [
   {
-    courseCode: "CS101",
-    courseTitle: "Introduction to Programming",
-    instructors: ["Dome"],
-  },
-  {
-    courseCode: "CS201",
-    courseTitle: "Data Structures",
-    instructors: ["Chanadda"],
-  },
-  {
-    courseCode: "CPE301",
+    courseCode: "261207",
     courseTitle: "Basic Computer Engineering Lab",
     instructors: ["Dome", "Chanadda"],
   },
   {
-    courseCode: "CPE302",
+    courseCode: "261497",
     courseTitle: "Full Stack Development",
     instructors: ["Dome", "Nirand", "Chanadda"],
   },
   {
-    courseCode: "ISNE101",
+    courseCode: "269101",
     courseTitle: "Introduction to Information Systems and Network Engineering",
     instructors: ["KENNETH COSH"],
   },
 ];
-
-export const CURRENT_STUDENT_ID = "650610002";
-export const currentStudent = students.find(
-  (s) => s.studentId === CURRENT_STUDENT_ID,
-)!;
