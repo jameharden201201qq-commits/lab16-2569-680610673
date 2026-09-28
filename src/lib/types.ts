@@ -3,14 +3,17 @@ interface Student {
   firstName: string;
   lastName: string;
   program: "CPE" | "ISNE";
+  status?: "Active" | "Inactive";
+  enrolledCourses?: string[];
   courses?: string[];
 }
 export type { Student };
 
 interface Course {
-  courseId: string;
+  courseCode?: string;
+  courseId?: string;
   courseTitle: string;
-  instructors: string[];
+  instructors?: string[];
 }
 export type { Course };
 
